@@ -11,7 +11,7 @@ In a real-world scenario, we have raw location logs for many users:
 
 We do **not** have a label `is_contact` (Yes/No). Manually creating this label for a supervised model (like SVM or KNN) is difficult, slow, and based on arbitrary rules.
 
-## 💡 Our Solution: Unsupervised Clustering
+## 💡 My Solution: Unsupervised Clustering
 
 This system uses DBSCAN to find contacts by treating the data as a series of time-slices.
 
