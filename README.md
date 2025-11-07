@@ -17,8 +17,8 @@ This system uses DBSCAN to find contacts by treating the data as a series of tim
 
 ### How It Works
 
-1.  **Iterate by Time:** The script loops through every unique timestamp (e.g., `14:01:00`, `14:02:00`, etc.) in the dataset.
-2.  **Isolate Data "Slices":** For each timestamp, it creates a temporary "slice" of all user locations *at that exact moment*.
+1.  **Iterate by Time(for multiple timestamps):** The script loops through every unique timestamp (e.g., `14:01:00`, `14:02:00`, etc.) in the dataset.
+2.  **Isolate Data "Slices"(if iterated):** For each timestamp, it creates a temporary "slice" of all user locations *at that exact moment*.
 3.  **Run DBSCAN:** It runs the DBSCAN algorithm on this individual time-slice.
     * **`eps` (Epsilon):** This is set to our "contact distance" (e.g., 20 meters). This is the most important parameter.
     * **`min_samples`:** This is set to **2**. This defines a "cluster" as a minimum of 2 people.
@@ -36,7 +36,8 @@ This method allows us to effectively "discover" contacts without ever needing to
 * **Pandas:** For loading and managing the data.
 * **Scikit-learn (sklearn):** For the `DBSCAN` implementation.
 * **NumPy:** For converting coordinates to radians for the Haversine calculation.
-
+* **Matplotlib & Seaborn:** For exploratory data analysis (EDA) and visualization.
++ **Folium:** For interactive, real-world map visualization.
 ## ⚙️ Installation
 
 1.  Clone this repository:
