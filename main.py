@@ -1,4 +1,4 @@
-from google.colab import drive
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -7,8 +7,7 @@ from sklearn.cluster import DBSCAN
 from sklearn.metrics import silhouette_score
 import folium
 
-drive.mount('/content/drive/')
-file_path = '/content/drive/MyDrive/contact.json'
+file_path = 'contact.json'
 
 df = pd.read_json(file_path)
 
